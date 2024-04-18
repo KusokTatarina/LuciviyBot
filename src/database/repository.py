@@ -172,55 +172,55 @@ async def insert_data_in_free_scetch():
         session.add_all([sketch1,sketch2,sketch3,sketch4,sketch5,sketch6,sketch7,sketch8,sketch9,sketch10,sketch11,sketch12,sketch13,sketch14,sketch15,sketch16,sketch17,sketch18,sketch19])
         await session.commit()
 
-async def insert_data_in_kind_skin():
-     async with async_session() as session:
-        skin1 = KindSkin(skin='Чистый участок кожи',prise=0)
-        skin2 = KindSkin(skin='Перекрытие шрамов',prise=0)
-        skin3 = KindSkin(skin='Перекрытие старой татуировки',prise=2000)
-        skin4 = KindSkin(skin='Коррекция старой татуировки',prise=0)
-        session.add_all([skin1,skin2,skin3,skin4])
-        await session.commit()
+# async def insert_data_in_kind_skin():
+#      async with async_session() as session:
+#         skin1 = KindSkin(skin='Чистый участок кожи',prise=0)
+#         skin2 = KindSkin(skin='Перекрытие шрамов',prise=0)
+#         skin3 = KindSkin(skin='Перекрытие старой татуировки',prise=2000)
+#         skin4 = KindSkin(skin='Коррекция старой татуировки',prise=0)
+#         session.add_all([skin1,skin2,skin3,skin4])
+#         await session.commit()
 
-async def insert_data_in_body_part():
-     async with async_session() as session:
-        body1 = BodyPart(body='Плечо',trabl=0)
-        body2 = BodyPart(body='Бицепс',trabl=0)
-        body3 = BodyPart(body='Трицепс',trabl=0)
-        body4 = BodyPart(body='Предплечье',trabl=0)
-        body5 = BodyPart(body='Локоть',trabl=1000)
-        body6 = BodyPart(body='Сгиб',trabl=1000)
-        body7 = BodyPart(body='Кисть',trabl=1000)
-        body8 = BodyPart(body='Пальцы',trabl=1000)
-        body9 = BodyPart(body='Бедро',trabl=0)
-        body10 = BodyPart(body='Колено',trabl=1000)
-        body11 = BodyPart(body='Голен',trabl=0)
-        body12 = BodyPart(body='Икра',trabl=0)
-        body13 = BodyPart(body='Стопа',trabl=1000)
-        body14 = BodyPart(body='Грудь',trabl=0)
-        body15 = BodyPart(body='Ребра',trabl=1000)
-        body16 = BodyPart(body='Живот',trabl=1000)
-        body17 = BodyPart(body='Ключицы',trabl=0)
-        body18 = BodyPart(body='Лопатки',trabl=0)
-        body19 = BodyPart(body='Позвоночник',trabl=0)
-        body20 = BodyPart(body='Поясница',trabl=1000)
-        body21 = BodyPart(body='Шея-Сзади',trabl=1000)
-        body22 = BodyPart(body='Шея-Сбоку',trabl=1000)
-        body23 = BodyPart(body='Шея-Спереди',trabl=1000)
-        body24 = BodyPart(body='Лицо',trabl=0)
-        body25 = BodyPart(body='За ухом',trabl=0)
-        body26 = BodyPart(body='Висок',trabl=0)
-        body27 = BodyPart(body='Затылок',trabl=1000)
+# async def insert_data_in_body_part():
+#      async with async_session() as session:
+#         body1 = BodyPart(body='Плечо',trabl=0)
+#         body2 = BodyPart(body='Бицепс',trabl=0)
+#         body3 = BodyPart(body='Трицепс',trabl=0)
+#         body4 = BodyPart(body='Предплечье',trabl=0)
+#         body5 = BodyPart(body='Локоть',trabl=1000)
+#         body6 = BodyPart(body='Сгиб',trabl=1000)
+#         body7 = BodyPart(body='Кисть',trabl=1000)
+#         body8 = BodyPart(body='Пальцы',trabl=1000)
+#         body9 = BodyPart(body='Бедро',trabl=0)
+#         body10 = BodyPart(body='Колено',trabl=1000)
+#         body11 = BodyPart(body='Голен',trabl=0)
+#         body12 = BodyPart(body='Икра',trabl=0)
+#         body13 = BodyPart(body='Стопа',trabl=1000)
+#         body14 = BodyPart(body='Грудь',trabl=0)
+#         body15 = BodyPart(body='Ребра',trabl=1000)
+#         body16 = BodyPart(body='Живот',trabl=1000)
+#         body17 = BodyPart(body='Ключицы',trabl=0)
+#         body18 = BodyPart(body='Лопатки',trabl=0)
+#         body19 = BodyPart(body='Позвоночник',trabl=0)
+#         body20 = BodyPart(body='Поясница',trabl=1000)
+#         body21 = BodyPart(body='Шея-Сзади',trabl=1000)
+#         body22 = BodyPart(body='Шея-Сбоку',trabl=1000)
+#         body23 = BodyPart(body='Шея-Спереди',trabl=1000)
+#         body24 = BodyPart(body='Лицо',trabl=0)
+#         body25 = BodyPart(body='За ухом',trabl=0)
+#         body26 = BodyPart(body='Висок',trabl=0)
+#         body27 = BodyPart(body='Затылок',trabl=1000)
 
-        session.add_all([body1,body2,body3,body4,body5,body6,body7,body8,body9,body10,body11,body12,body13,
-                        body14,body15,body16,body17,body18,body19,body20,body21,body22,body23,body24,body25,
-                        body26,body27])
-        await session.commit()
+#         session.add_all([body1,body2,body3,body4,body5,body6,body7,body8,body9,body10,body11,body12,body13,
+#                         body14,body15,body16,body17,body18,body19,body20,body21,body22,body23,body24,body25,
+#                         body26,body27])
+#         await session.commit()
 
-async def insert_data_in_body_part():
-     async with async_session() as session:
-        prise1 = PriseSize(size='До 10 см',price_ot=5000,price_do=5000)
-        prise2 = PriseSize(size='От 10 до 15 см',price_ot=9000,price_do=12000)
-        prise3 = PriseSize(size='От 15 до 30 см',price_ot=15000,price_do=5000)
-        prise4 = PriseSize(size='30 и более см',price_ot=5000,price_do=5000)
-        session.add_all([prise1,prise2,prise3,prise4])
-        await session.commit()
+# async def insert_data_in_body_part():
+#      async with async_session() as session:
+#         prise1 = PriseSize(size='До 10 см',price_ot=5000,price_do=5000)
+#         prise2 = PriseSize(size='От 10 до 15 см',price_ot=9000,price_do=12000)
+#         prise3 = PriseSize(size='От 15 до 30 см',price_ot=15000,price_do=5000)
+#         prise4 = PriseSize(size='30 и более см',price_ot=5000,price_do=5000)
+#         session.add_all([prise1,prise2,prise3,prise4])
+#         await session.commit()

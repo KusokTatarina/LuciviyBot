@@ -23,11 +23,11 @@ class FreeScketch(Base):
     path: Mapped[str]
     description: Mapped[Optional[str]]
     
-class KindSkin(Base):
-    __tablename__ = 'KindSkin'
-    id: Mapped[int] = mapped_column(primary_key=True)
-    skin: Mapped[str]
-    prise: Mapped[int]
+# class KindSkin(Base):
+#     __tablename__ = 'KindSkin'
+#     id: Mapped[int] = mapped_column(primary_key=True)
+#     skin: Mapped[str]
+#     prise: Mapped[int]
     
 
 # class BodyPart(Base):
@@ -37,15 +37,15 @@ class KindSkin(Base):
 #     do10: Mapped[int]
 #     ot10: Mapped[int]
 
-class BodyPart(Base):
-    __tablename__ = 'BodyPart'
-    id: Mapped[int] = mapped_column(primary_key=True)
-    body: Mapped[str]
-    trabl: Mapped[int]
+# class BodyPart(Base):
+#     __tablename__ = 'BodyPart'
+#     id: Mapped[int] = mapped_column(primary_key=True)
+#     body: Mapped[str]
+#     trabl: Mapped[int]
 
-class PriseSize(Base):
-    __tablename__ = 'PriseSize'
-    id: Mapped[int] = mapped_column(primary_key=True)
-    size: Mapped[str]
-    price_ot: Mapped[int]
-    price_do: Mapped[int]
+# class PriseSize(Base):
+#     __tablename__ = 'PriseSize'
+#     id: Mapped[int] = mapped_column(primary_key=True)
+#     size: Mapped[str]
+#     price_ot: Mapped[int]
+#     price_do: Mapped[int]
