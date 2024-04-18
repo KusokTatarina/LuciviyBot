@@ -5,27 +5,55 @@ from telebot import types
 def keybord_menu():
     markup = types.InlineKeyboardMarkup()
     bt1 = (types.InlineKeyboardButton('О себе', callback_data='myself'))
+    bt5 = (types.InlineKeyboardButton('Часто задаваемые вопросы', callback_data='question'))
     bt2 = (types.InlineKeyboardButton('Мои свободные эскизы', callback_data='free_sketch'))
     bt3 = (types.InlineKeyboardButton('Примеры моих работ', callback_data='my_work'))
     bt4 = (types.InlineKeyboardButton('Рассчитать стоимость татуировки', callback_data='calc_tattoo'))
-    markup.row(bt1)
-    markup.row(bt2)
-    markup.row(bt3)
     markup.row(bt4)
+    markup.row(bt2)
+    markup.row(bt1)
+    markup.row(bt3)
+    markup.row(bt5)
     return markup
 
 #Кнопки Обо мне
 def keybord_myself():
     markup = types.InlineKeyboardMarkup()
     bt1 = (types.InlineKeyboardButton('Мой ВК', url='https://vk.com/viktoria_dahmer'))
-    bt2 = (types.InlineKeyboardButton('Мой инстаграмм', url='https://www.instagram.com/_lucivictor?igsh=MTY5OXF3bXRoenp4aA=='))
+    bt2 = (types.InlineKeyboardButton('Мой Инстаграмм', url='https://www.instagram.com/_lucivictor?igsh=MTY5OXF3bXRoenp4aA=='))
     bt3 = (types.InlineKeyboardButton('Моя группа в ВК', url='https://vk.com/luciviytattooo'))
-    bt4 = (types.InlineKeyboardButton('Мой Телеграмм Канала', url='https://t.me/luciviytattoo'))
+    bt4 = (types.InlineKeyboardButton('Мой Телеграмм Канал', url='https://t.me/luciviytattoo'))
     bt5 = (types.InlineKeyboardButton('Вернуться в Меню', callback_data='menu'))
     markup.row(bt1,bt2)
     markup.row(bt3,bt4)
     markup.row(bt5)
     return markup
+
+
+#Кнопки для Вопросов
+def keybord_question():
+    markup = types.InlineKeyboardMarkup()
+    bt1 = (types.InlineKeyboardButton('🪦 Как проходит сеанс ', callback_data='seans_question'))
+    bt2 = (types.InlineKeyboardButton('🪦 Противопоказания к тату', callback_data='protivopokaz_question'))
+    bt3 = (types.InlineKeyboardButton('🪦 Уход за татуировкой', callback_data='uhod_question'))
+    bt4 = (types.InlineKeyboardButton('🪦 Информация о предоплате', callback_data='predoplata_question'))
+    bt5 = (types.InlineKeyboardButton('Вернуться в Меню', callback_data='menu'))
+    markup.row(bt1)
+    markup.row(bt2)
+    markup.row(bt3)
+    markup.row(bt4)
+    markup.row(bt5)
+    return markup
+
+
+#Кнопки в конце вопросов
+def keyboard_end_question():
+    markup = types.InlineKeyboardMarkup()
+    bt1 = (types.InlineKeyboardButton('Ещё вопросы', callback_data='question'))
+    bt2 = (types.InlineKeyboardButton('Вернуться в меню', callback_data='menu'))
+    markup.row(bt1, bt2)
+    return markup
+
 
 #Кнопки Да и Нет для регистрации пользователя
 def keyboard_yes_or_no():
