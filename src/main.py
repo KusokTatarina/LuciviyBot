@@ -4,7 +4,7 @@ from telebot.async_telebot import AsyncTeleBot
 from telebot.types import CallbackQuery, InputMediaPhoto
 
 from database.database import async_create_tables
-from database.repository import UserRepository, FreeSketchRepository, CalculСostRepository, insert_data_in_free_scetch
+from database.repository import UserRepository, FreeSketchRepository, CalculСostRepository, insert_data_in_free_scetch, take_counts_users
 from examples_works.examples_work import group_my_examples_work1, group_my_examples_work2
 from myself.photo import group_my_photo
 from keyboard.keyboard import * # keybord_for_sketch, keybord_size, keyboard_yes_or_no, keybord_skin, keybord_menu, keybord_body, keybord_hand, keybord_leg, keybord_torso, keybord_back, keybord_head, keybord_neck
@@ -32,7 +32,9 @@ async def startcomand(message: types.Message):
     else:
         await bot.send_message(message.chat.id, 'Привет, я тату-бот Виктории, помогу тебе рассчитать стоимость желаемой тату и покажу свободные эскизы, которые можно нанести на кожу 🖤\n\nДля начала давай познакомимся. Как тебя зовут? 👻')
         
-
+@bot.message_handler(commands=['take_counts_users'])
+async def startcomand(message: types.Message):
+    await bot.send_message(message.chat.id, str(await take_counts_users()))
 
 #Получение имени и работа с обычным текстом
 @bot.message_handler(content_types=['text'])
@@ -73,8 +75,8 @@ async def callback_message(callback: CallbackQuery):
 
     #Вопросы про сеанс
     elif callback.data == 'seans_question':
-        pic2 = open(r"C:\Users\nicki\Desktop\LuciviyBOT\src\question\seans2.jpg", "rb")
-        pic3 = open(r"C:\Users\nicki\Desktop\LuciviyBOT\src\question\seans3.jpg", "rb")
+        pic2 = open(r"src\question\seans2.jpg", "rb")
+        pic3 = open(r"src\question\seans3.jpg", "rb")
         media = [                               
                 InputMediaPhoto(pic2),
                 InputMediaPhoto(pic3),
@@ -86,19 +88,19 @@ async def callback_message(callback: CallbackQuery):
 
     #Вопросы про уход
     elif callback.data == 'uhod_question':
-        pic1 = open(r"C:\Users\nicki\Desktop\LuciviyBOT\src\question\uhod.jpg", "rb")
+        pic1 = open(r"src\question\uhod.jpg", "rb")
         await bot.send_photo(chat_id, pic1, '🛁Уход за татуировкой🧴',reply_markup=keyboard_end_question())
 
     #Вопросы про противоопоказания
     elif callback.data == 'protivopokaz_question':
-        pic1 = open(r"C:\Users\nicki\Desktop\LuciviyBOT\src\question\protiv.jpg", "rb")
+        pic1 = open(r"src\question\protiv.jpg", "rb")
         await bot.send_photo(chat_id, pic1, '❗️Кому нельзя делать татуировку ❗️',reply_markup=keyboard_end_question())
 
 
     #Вопросы про Предоплату
     elif callback.data == 'predoplata_question':
-        pic1 = open(r"C:\Users\nicki\Desktop\LuciviyBOT\src\question\pered.jpg", "rb")
-        pic2 = open(r"C:\Users\nicki\Desktop\LuciviyBOT\src\question\pered1.jpg", "rb")
+        pic1 = open(r"src\question\pered.jpg", "rb")
+        pic2 = open(r"src\question\pered1.jpg", "rb")
         media = [                               
                 InputMediaPhoto(pic1),
                 InputMediaPhoto(pic2),

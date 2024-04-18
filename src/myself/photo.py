@@ -1,13 +1,13 @@
 from telebot.types import InputMediaPhoto
 
 def group_my_photo():
-        pic1 = open(r"C:\Users\nicki\Desktop\LuciviyBOT\src\myself\1.jpg", "rb")
-        pic2 = open(r"C:\Users\nicki\Desktop\LuciviyBOT\src\myself\2.jpg", "rb")
-        pic3 = open(r"C:\Users\nicki\Desktop\LuciviyBOT\src\myself\3.jpg", "rb")
-        pic4 = open(r"C:\Users\nicki\Desktop\LuciviyBOT\src\myself\4.jpg", "rb")
-        pic5 = open(r"C:\Users\nicki\Desktop\LuciviyBOT\src\myself\5.jpg", "rb")
-        pic6 = open(r"C:\Users\nicki\Desktop\LuciviyBOT\src\myself\6.jpg", "rb")
-        pic7 = open(r"C:\Users\nicki\Desktop\LuciviyBOT\src\myself\7.jpg", "rb")
+        pic1 = open(r"src\myself\1.jpg", "rb")
+        pic2 = open(r"src\myself\2.jpg", "rb")
+        pic3 = open(r"src\myself\3.jpg", "rb")
+        pic4 = open(r"src\myself\4.jpg", "rb")
+        pic5 = open(r"src\myself\5.jpg", "rb")
+        pic6 = open(r"src\myself\6.jpg", "rb")
+        pic7 = open(r"src\myself\7.jpg", "rb")
 
         
         media = [InputMediaPhoto(pic1, 
