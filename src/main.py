@@ -93,14 +93,14 @@ async def callback_message(callback: CallbackQuery):
 
     #Вопросы про противоопоказания
     elif callback.data == 'protivopokaz_question':
-        pic1 = open(r"question\protiv.jpg", "rb")
+        pic1 = open(r"question/protiv.jpg", "rb")
         await bot.send_photo(chat_id, pic1, '❗️Кому нельзя делать татуировку ❗️',reply_markup=keyboard_end_question())
 
 
     #Вопросы про Предоплату
     elif callback.data == 'predoplata_question':
-        pic1 = open(r"src\question\pered.jpg", "rb")
-        pic2 = open(r"src\question\pered1.jpg", "rb")
+        pic1 = open(r"question/pered.jpg", "rb")
+        pic2 = open(r"question/pered1.jpg", "rb")
         media = [                               
                 InputMediaPhoto(pic1),
                 InputMediaPhoto(pic2),
