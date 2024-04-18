@@ -75,8 +75,8 @@ async def callback_message(callback: CallbackQuery):
 
     #Вопросы про сеанс
     elif callback.data == 'seans_question':
-        pic2 = open(r"src\question\seans2.jpg", "rb")
-        pic3 = open(r"src\question\seans3.jpg", "rb")
+        pic2 = open(r"src/question/seans2.jpg", "rb")
+        pic3 = open(r"src/question/seans3.jpg", "rb")
         media = [                               
                 InputMediaPhoto(pic2),
                 InputMediaPhoto(pic3),
@@ -88,7 +88,7 @@ async def callback_message(callback: CallbackQuery):
 
     #Вопросы про уход
     elif callback.data == 'uhod_question':
-        pic1 = open(r"src\question\uhod.jpg", "rb")
+        pic1 = open("src/question/uhod.jpg", "rb")
         await bot.send_photo(chat_id, pic1, '🛁Уход за татуировкой🧴',reply_markup=keyboard_end_question())
 
     #Вопросы про противоопоказания
