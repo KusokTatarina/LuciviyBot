@@ -10,7 +10,7 @@ from myself.photo import group_my_photo
 from keyboard.keyboard import * # keybord_for_sketch, keybord_size, keyboard_yes_or_no, keybord_skin, keybord_menu, keybord_body, keybord_hand, keybord_leg, keybord_torso, keybord_back, keybord_head, keybord_neck
 
 
-bot = AsyncTeleBot(token='6511744553:AAE85JGv_6SqPeq2OtjT78arhk87GEpHhDs')
+bot = AsyncTeleBot(token='TOKEN')
 
 
 
